@@ -1,31 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+
 import "./App.css";
 import fonts from "./App.module.css";
 import Square from "./components/Square";
-function App() {
-  const userPrefersDark = window.matchMedia(
-    "(prefers-color-scheme: dark)"
-  ).matches;
-  const [theme, setTheme] = useState(
-    userPrefersDark === true ? "dark" : "light"
-  );
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-  };
+import FontToggle from "./components/FontToggle";
+import ThemeToggle from "./components/ThemeToggle";
 
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
+import { useSettingsContext } from "./context";
+
+function App() {
+  const { fontFace, theme } = useSettingsContext();
 
   return (
-    <div className={`App ${fonts.Three}`} data-theme={theme}>
+    <div className={`App ${fonts[fontFace]}`} data-theme={theme}>
       <h1>hello world</h1>
-      {/* <button onClick={toggleFont("Two")}>change font</button> */}
-      <button onClick={toggleTheme}>
-        toggle to {theme === "light" ? "Dark" : "Light"}
-      </button>
+      <ThemeToggle />
       <Square />
+      <FontToggle />
     </div>
   );
 }

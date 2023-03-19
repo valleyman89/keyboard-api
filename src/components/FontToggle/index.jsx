@@ -1,11 +1,20 @@
 import React from "react";
 import "./FontToggle.css";
+import { useSettingsContext } from "./../../context/index";
 
 const FontToggle = () => {
+  const { setFontFace } = useSettingsContext();
+
+  const handleFontToggle = (selectedFont) => {
+    setFontFace(selectedFont);
+  };
+
   return (
-    <div>
-      <button>massive attack</button>
-    </div>
+    <select onChange={(e) => handleFontToggle(e.target.value)}>
+      <option value="Serif">Serif</option>
+      <option value="SansSerif">Sans-Serif</option>
+      <option value="Mono">Mono</option>
+    </select>
   );
 };
 

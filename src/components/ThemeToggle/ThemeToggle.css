@@ -1,0 +1,8 @@
+button {
+  all: unset;
+  background-image: url("../../../public/images/icon-moon.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 3rem;
+  width: 3rem;
+}

@@ -1,0 +1,12 @@
+select {
+  all: unset;
+  background-image: url(../../../public/images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 2rem;
+  width: max-content;
+}
+
+select option {
+  background-color: var(--background);
+}

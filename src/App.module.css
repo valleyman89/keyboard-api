@@ -1,9 +1,9 @@
-.One {
-  font-family: sans-serif;
-}
-.Two {
+.Serif {
   font-family: serif;
 }
-.Three {
+.SansSerif {
+  font-family: sans-serif;
+}
+.Mono {
   font-family: monospace;
 }
