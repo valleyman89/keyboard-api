@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useSettingsContext } from "./../../context/index";
 import "./ThemeToggle.css";
+import { ReactComponent as ToogleSVG } from "./icon-moon.svg";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useSettingsContext();
@@ -17,7 +18,9 @@ const ThemeToggle = () => {
 
   return (
     <>
-      <button type="button" onClick={toggleTheme}></button>
+      <button type="button" onClick={toggleTheme}>
+        <ToogleSVG />
+      </button>
     </>
   );
 };
