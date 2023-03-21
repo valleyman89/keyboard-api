@@ -12,6 +12,7 @@
   --accent: #a445ed;
   --error: #ff5252;
   --text-color: #2d2d2d;
+  --moon: #2d2d2d;
 }
 /* Dark theme */
 [data-theme="dark"] {
@@ -20,6 +21,7 @@
   --secondary: #1f1f1f;
   --tertiary: #050505;
   --text-color: #f4f4f4f4;
+  --moon: #a445ed;
 }
 
 html {
