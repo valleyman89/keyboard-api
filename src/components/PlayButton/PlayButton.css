@@ -1,0 +1,11 @@
+.playbutton button {
+  all: unset;
+}
+.play {
+  fill: #e8d0fb;
+}
+
+.play:hover {
+  cursor: pointer;
+  fill: var(--accent);
+}
