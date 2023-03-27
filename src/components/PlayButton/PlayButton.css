@@ -1,11 +1,18 @@
 .playbutton button {
   all: unset;
-}
-.play {
-  fill: #e8d0fb;
+  cursor: pointer;
 }
 
-.play:hover {
-  cursor: pointer;
+.circle {
+  fill: var(--playbutton);
+}
+.triangle {
   fill: var(--accent);
+}
+
+.play:hover .circle {
+  fill: var(--accent);
+}
+.play:hover .triangle {
+  fill: #fff;
 }
