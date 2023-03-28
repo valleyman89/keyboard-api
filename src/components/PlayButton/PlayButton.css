@@ -3,13 +3,14 @@
   cursor: pointer;
 }
 
+/* SVG  */
 .circle {
   fill: var(--playbutton);
 }
 .triangle {
   fill: var(--accent);
 }
-
+/* SVG hover */
 .play:hover .circle {
   fill: var(--accent);
 }
