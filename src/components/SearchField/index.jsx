@@ -1,6 +1,6 @@
 import React from "react";
 import "./SearchField.css";
-import { ReactComponent as SearchIcon } from "./icon-search.svg";
+
 const SearchField = () => {
   return (
     <div>
