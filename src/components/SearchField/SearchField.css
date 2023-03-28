@@ -1,0 +1,28 @@
+input[type="search"] {
+  background-color: var(--secondary);
+  background-image: url("./icon-search.svg");
+  background-position: 94% 50%;
+  background-repeat: no-repeat;
+  color: var(--text-color);
+  opacity: 50%;
+  border: 0;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1.5rem;
+  transition: width 0.4s ease-in-out;
+  width: 25%;
+}
+input[type="search"]:focus {
+  opacity: 100%;
+  outline: none;
+  border: 1px solid var(--accent);
+  width: 100%;
+}
+
+input:not(:placeholder-shown):not(:focus):invalid {
+  border: 0;
+}
+input[type="search"]:invalid {
+  border: 1px solid var(--error);
+}

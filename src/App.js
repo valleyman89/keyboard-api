@@ -9,6 +9,7 @@ import ThemeToggle from "./components/ThemeToggle";
 
 import { useSettingsContext } from "./context";
 import PlayButton from "./components/PlayButton";
+import SearchField from "./components/SearchField/index";
 
 function App() {
   const { fontFace, theme } = useSettingsContext();
@@ -16,14 +17,12 @@ function App() {
   return (
     <div className={`App ${fonts[fontFace]}`} data-theme={theme}>
       <h1>hello world</h1>
-      <h2>
-        <PlayButton />
-      </h2>
+      <h2>{/* <PlayButton /> */}</h2>
       <ThemeToggle />
+      <SearchField />
+      {/* <Square /> */}
 
-      <Square />
-
-      <FontToggle />
+      {/* <FontToggle /> */}
     </div>
   );
 }
