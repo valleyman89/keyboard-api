@@ -3,13 +3,14 @@ import React from "react";
 import "./App.css";
 import fonts from "./Settings.module.css";
 
-import Square from "./components/Square";
+// import Square from "./components/Square";
 import FontToggle from "./components/FontToggle";
 import ThemeToggle from "./components/ThemeToggle";
 
 import { useSettingsContext } from "./context";
-import PlayButton from "./components/PlayButton";
+// import PlayButton from "./components/PlayButton";
 import SearchField from "./components/SearchField/index";
+import Word from "./components/Word";
 
 function App() {
   const { fontFace, theme } = useSettingsContext();
@@ -19,10 +20,10 @@ function App() {
       <h1>hello world</h1>
       <h2>{/* <PlayButton /> */}</h2>
       <ThemeToggle />
-      <SearchField />
+      {/* <SearchField /> */}
       {/* <Square /> */}
-
       {/* <FontToggle /> */}
+      <Word />
     </div>
   );
 }
