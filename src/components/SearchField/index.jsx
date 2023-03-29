@@ -3,7 +3,7 @@ import "./SearchField.css";
 
 const SearchField = () => {
   return (
-    <div>
+    <>
       <input
         type="search"
         placeholder="Search for any word..."
@@ -11,8 +11,9 @@ const SearchField = () => {
         maxLength={"45"}
         pattern="^[a-zA-Z ]*$"
         title="Letters only"
-      />
-    </div>
+      />{" "}
+      <span className="error">Whoops, can't be empty...</span>
+    </>
   );
 };
 

@@ -9,9 +9,10 @@ input[type="search"] {
   font-family: inherit;
   font-size: 2rem;
   font-weight: bold;
-  opacity: 50%;
+  opacity: 75%;
+  margin-bottom: 1rem;
   padding: 1.5rem;
-  width: 50%;
+  width: 100%;
 }
 input[type="search"]:focus {
   opacity: 100%;
@@ -21,4 +22,13 @@ input[type="search"]:focus {
 
 input[type="search"]:invalid {
   border: 1px solid var(--error);
+}
+
+.error {
+  display: none;
+}
+
+input:invalid:not([value=""]) + .error {
+  display: block;
+  color: var(--error);
 }

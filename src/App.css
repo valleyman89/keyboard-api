@@ -1,20 +1,25 @@
 body {
-  background-color: var(--error);
   margin: 0;
 }
 .App {
-  color: var(--text-color);
   background-color: var(--background);
+  color: var(--text-color);
   font-size: large;
-  font-weight: bold;
-  padding: 20px;
-  height: calc(100vh - 40px);
+  height: 100%;
+  margin: 0;
   transition: all 0.5s;
+  width: 100%;
 }
-button {
+
+.Container {
+  padding: 2rem;
+  padding-bottom: 6rem;
+}
+
+/* button {
   color: var(--text-color);
   background-color: var(--background);
   border: 2px var(--primary) solid;
   float: right;
   transition: all 0.5s;
-}
+} */

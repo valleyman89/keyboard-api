@@ -17,10 +17,10 @@
 }
 /* Dark theme */
 [data-theme="dark"] {
-  --background: #3a3a3a;
+  --background: #050505;
   --primary: #2d2d2d;
   --secondary: #1f1f1f;
-  --tertiary: #050505;
+  --tertiary: #3a3a3a;
   --text-color: #f4f4f4f4;
   --moon: #a445ed;
 }

@@ -1,0 +1,60 @@
+h1 {
+  margin-bottom: 0;
+}
+
+.part-of-speech {
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  color: var(--text-color);
+  margin-right: 2rem;
+}
+
+hr {
+  all: unset;
+  border-top: 1px solid var(--secondary);
+  width: 75vw;
+}
+
+h3 {
+  margin-left: 1rem;
+  color: var(--tertiary);
+  text-transform: capitalize;
+}
+.highlight {
+  color: var(--accent);
+}
+
+ul {
+  list-style: none;
+  list-style-position: outside;
+  margin-left: -1rem;
+}
+
+li::before {
+  content: "•";
+  font-size: x-large;
+  color: var(--accent);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+h4 {
+  text-transform: capitalize;
+  text-decoration: underline;
+
+  color: var(--tertiary);
+  margin-bottom: 1rem;
+}
+
+a::after {
+  content: "";
+}
