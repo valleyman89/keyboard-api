@@ -9,15 +9,13 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <>
-      <div className="header">
-        <LogoSVG />
-        <FontToggle /> <ThemeToggle />
-      </div>
-      <div>
+    <header>
+      <LogoSVG />
+      <FontToggle /> <ThemeToggle />
+      <nav>
         <SearchField />
-      </div>
-    </>
+      </nav>
+    </header>
   );
 };
 

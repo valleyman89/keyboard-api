@@ -6,9 +6,9 @@ const Main = () => {
   const word = Data[0];
   console.log(word);
   return (
-    <div>
+    <section>
       <h1>{word.word}</h1>
-      <span className="highlight">{word.phonetic}</span>
+      <mark>{word.phonetic}</mark>
       {word.meanings.map((meaning, index) => (
         <div key={index}>
           <div className="part-of-speech">
@@ -21,11 +21,17 @@ const Main = () => {
               <li>{definition.definition}</li>
             </ul>
           ))}
+          <h3>synonyms</h3>
+          <span className="synonym">
+            {meaning.synonyms ? meaning.synonyms[0] : null}
+          </span>
         </div>
       ))}
       <h4>source</h4>
-      <a href="{word.sourceUrls[0]}">{word.sourceUrls[0]}</a>
-    </div>
+      <a href={word.sourceUrls[0]} rel="noreferrer" target="_blank">
+        {word.sourceUrls[0]}
+      </a>
+    </section>
   );
 };
 

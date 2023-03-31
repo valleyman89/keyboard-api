@@ -1,9 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap");
+
 .Serif {
-  font-family: serif;
+  font-family: "Lora", serif;
+  word-spacing: 1rem;
+  line-height: 2.4rem;
 }
 .SansSerif {
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
+  word-spacing: 1rem;
+  line-height: 2.4rem;
 }
 .Mono {
-  font-family: monospace;
+  font-family: "Inconsolata", monospace;
+  word-spacing: 1rem;
+  line-height: 2.4rem;
 }
