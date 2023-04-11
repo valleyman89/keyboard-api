@@ -4,9 +4,9 @@ select {
   background-repeat: no-repeat;
   background-position: right;
   padding-right: 2rem;
-  width: max-content;
+  cursor: pointer;
 }
 
-select option {
+/* select option {
   background-color: var(--background);
-}
+} */

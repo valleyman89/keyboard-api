@@ -17,6 +17,11 @@ function App() {
         <Header />
         <Main />
       </div>
+      <footer>
+        <a href="https://stevenrolph.com" rel="noreferrer" target="_blank">
+          Steven Rolph 2023
+        </a>
+      </footer>
     </div>
   );
 }

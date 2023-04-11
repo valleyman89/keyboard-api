@@ -10,8 +10,15 @@ import "./Header.css";
 const Header = () => {
   return (
     <header>
-      <LogoSVG />
-      <FontToggle /> <ThemeToggle />
+      <div className="logo">
+        <LogoSVG />
+      </div>
+      <div className="font-toggle">
+        <FontToggle />
+      </div>
+      <div className="theme-toggle">
+        <ThemeToggle />
+      </div>
       <nav>
         <SearchField />
       </nav>

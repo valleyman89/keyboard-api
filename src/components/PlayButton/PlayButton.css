@@ -3,6 +3,15 @@
   cursor: pointer;
 }
 
+/* audio controls */
+audio::-webkit-media-controls-mute-button {
+  display: none;
+}
+
+audio {
+  width: 50%;
+}
+
 /* SVG  */
 .circle {
   fill: var(--playbutton);
