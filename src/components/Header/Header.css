@@ -21,7 +21,7 @@ header {
   justify-self: end;
   padding-left: 1rem;
 }
-nav {
+hgroup {
   grid-area: 2 / 1 / 3 / 4;
   width: 100%;
 }

@@ -1,12 +1,11 @@
 select {
   all: unset;
-  background-image: url(../../../public/images/icon-arrow-down.svg);
-  background-repeat: no-repeat;
-  background-position: right;
-  padding-right: 2rem;
-  cursor: pointer;
-}
-
-/* select option {
   background-color: var(--background);
-} */
+  background-image: url(../../../public/images/icon-arrow-down.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  color: var(--text-color);
+  cursor: pointer;
+  padding-right: 2rem;
+  text-align: center;
+}

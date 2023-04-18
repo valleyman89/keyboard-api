@@ -1,6 +1,15 @@
-.part-of-speech {
+.subtitle {
   display: flex;
   align-items: center;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -23,6 +32,7 @@ h3 {
 }
 mark {
   all: unset;
+  display: inline-block;
   color: var(--accent);
 }
 
