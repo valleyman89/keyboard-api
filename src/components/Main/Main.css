@@ -1,4 +1,4 @@
-.part-of-speech {
+.subtitle {
   display: flex;
   align-items: center;
 }
@@ -25,6 +25,7 @@ h3 {
 }
 mark {
   all: unset;
+  display: inline-block;
   color: var(--accent);
 }
 

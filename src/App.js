@@ -7,21 +7,16 @@ import fonts from "./Settings.module.css";
 
 import Header from "./components/Header";
 import Main from "./components/Main";
-
+import Footer from "./components/Footer";
 function App() {
-  const { fontFace, theme } = useSettingsContext();
-
+  const { data, fontFace, theme } = useSettingsContext();
   return (
     <div className={`App ${fonts[fontFace]}`} data-theme={theme}>
       <div className="Container">
         <Header />
-        <Main />
+        {data ? <Main /> : "no results"}
+        <Footer />
       </div>
-      <footer>
-        <a href="https://stevenrolph.com" rel="noreferrer" target="_blank">
-          Steven Rolph 2023
-        </a>
-      </footer>
     </div>
   );
 }

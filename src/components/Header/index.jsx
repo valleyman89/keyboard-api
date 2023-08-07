@@ -11,7 +11,9 @@ const Header = () => {
   return (
     <header>
       <div className="logo">
-        <LogoSVG />
+        <a href="google.com">
+          <LogoSVG />
+        </a>
       </div>
       <div className="font-toggle">
         <FontToggle />
@@ -19,9 +21,7 @@ const Header = () => {
       <div className="theme-toggle">
         <ThemeToggle />
       </div>
-      <nav>
-        <SearchField />
-      </nav>
+      <SearchField />
     </header>
   );
 };
