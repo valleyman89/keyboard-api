@@ -1,5 +1,4 @@
 import React, { createContext, useState } from "react";
-import getData from "../data/fakeData.json";
 
 export const SettingsContext = createContext();
 

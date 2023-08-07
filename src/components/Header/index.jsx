@@ -21,7 +21,9 @@ const Header = () => {
       <div className="theme-toggle">
         <ThemeToggle />
       </div>
-      <SearchField />
+      <hgroup>
+        <SearchField />
+      </hgroup>
     </header>
   );
 };

@@ -17,17 +17,15 @@ const SearchField = () => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <input
-          ref={searchRef}
-          type="search"
-          placeholder="Search for any word..."
-          spellCheck={true}
-          maxLength={"30"}
-          pattern="^[a-zA-Z ]*$"
-          title="Letters only"
-        />
-      </div>
+      <input
+        ref={searchRef}
+        type="search"
+        placeholder="Search for any word..."
+        spellCheck={true}
+        maxLength={"30"}
+        pattern="^[a-zA-Z ]*$"
+        title="Letters only"
+      />
     </form>
   );
 };

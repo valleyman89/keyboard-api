@@ -6,15 +6,15 @@ input[type="search"] {
   border-radius: 15px;
   border: 1px solid var(--secondary);
   color: var(--text-color);
+  cursor: pointer;
   font-family: inherit;
   font-size: 2rem;
   font-weight: bold;
-  opacity: 75%;
   margin-bottom: 1rem;
+  opacity: 75%;
   padding: 1.5rem;
-  width: 100%;
-  cursor: pointer;
   text-transform: lowercase;
+  width: 100%;
 }
 input[type="search"]:focus {
   opacity: 100%;
