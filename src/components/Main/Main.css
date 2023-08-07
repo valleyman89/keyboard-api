@@ -96,6 +96,7 @@ a:hover {
 
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
+  padding-left: 0.1rem;
 }
 .div2 {
   grid-area: 1 / 2 / 2 / 3;
