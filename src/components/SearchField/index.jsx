@@ -12,7 +12,7 @@ const SearchField = () => {
         pattern="^[a-zA-Z ]*$"
         title="Letters only"
       />{" "}
-      <span className="error">Whoops, can't be empty...</span>
+      <span className="error">Whoops, letters only...</span>
     </>
   );
 };
