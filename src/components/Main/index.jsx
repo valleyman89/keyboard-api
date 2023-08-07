@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./Main.css";
 import PlayButton from "../PlayButton";
 import axios, { CanceledError } from "axios";
+import { useSettingsContext } from "../../context";
 
 const Main = () => {
+  const { search } = useSettingsContext();
   const [data, setData] = useState();
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -12,7 +14,7 @@ const Main = () => {
     const controller = new AbortController();
     setLoading(true);
     axios
-      .get("https://api.dictionaryapi.dev/api/v2/entries/en/wrestle", {
+      .get("https://api.dictionaryapi.dev/api/v2/entries/en/" + search, {
         signal: controller.signal,
       })
       .then((response) => {
@@ -27,7 +29,7 @@ const Main = () => {
       });
 
     return () => controller.abort();
-  }, []);
+  }, [search]);
 
   return (
     <>
@@ -35,9 +37,16 @@ const Main = () => {
       {isLoading && <p>loading...</p>}
       {data && (
         <section>
-          <h1>{data.word}</h1>
-          <mark>{data.phonetic}</mark>
-          <PlayButton />
+          <div className="parent">
+            <div className="div1">
+              <h1>{data.word}</h1>
+              <mark>{data.phonetic}</mark>
+            </div>
+            <div className="div2">
+              <PlayButton />
+            </div>
+          </div>
+
           {data.meanings.map((meaning, index) => (
             <div key={index}>
               <div className="part-of-speech">
