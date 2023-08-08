@@ -15,7 +15,7 @@ export const SettingsProvider = ({ children }) => {
     userPrefersDark === true ? "dark" : "light"
   );
 
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("keyboard");
 
   return (
     <SettingsContext.Provider
