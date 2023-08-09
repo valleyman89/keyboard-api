@@ -16,6 +16,7 @@ const SearchField = () => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        autoFocus
         required
         ref={searchRef}
         type="search"
