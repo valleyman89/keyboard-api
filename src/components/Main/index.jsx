@@ -3,6 +3,7 @@ import "./Main.css";
 import PlayButton from "../PlayButton";
 
 const Main = ({ data }) => {
+  const audioUrl = data.phonetics[0]?.audio;
   return (
     <>
       <section>
@@ -12,7 +13,7 @@ const Main = ({ data }) => {
             {data.phonetic ? <mark>{data.phonetic}</mark> : null}
           </div>
           <div className="div2">
-            <PlayButton />
+            {audioUrl ? <PlayButton source={audioUrl} /> : null}
           </div>
         </div>
 
