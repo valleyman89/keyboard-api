@@ -6,7 +6,7 @@ body {
   background-color: var(--background);
   color: var(--text-color);
   font-size: large;
-  height: 100vh;
+  height: 100%;
   margin: 0;
   transition: all 0.5s;
   width: 100%;
