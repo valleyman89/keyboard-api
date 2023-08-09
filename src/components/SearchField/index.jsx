@@ -12,8 +12,6 @@ const SearchField = () => {
 
     if (searchRef.current !== null)
       setSearch(searchRef.current.value.toLowerCase());
-
-    console.log(searchRef.current.value.toLowerCase() + " sent to server");
   };
   return (
     <form onSubmit={handleSubmit}>
