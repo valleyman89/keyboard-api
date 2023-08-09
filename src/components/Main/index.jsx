@@ -1,8 +1,10 @@
 import React from "react";
 import "./Main.css";
 import PlayButton from "../PlayButton";
+import { useSettingsContext } from "./../../context/index";
 
 const Main = ({ data }) => {
+  const { setSearch } = useSettingsContext();
   const audioUrl = data.phonetics[0]?.audio;
   return (
     <>
@@ -32,9 +34,15 @@ const Main = ({ data }) => {
             {meaning.synonyms[0] ? (
               <div>
                 <h3>synonyms</h3>
-                <a id={meaning.synonyms[0]} href="test" className="synonym">
-                  {meaning.synonyms ? meaning.synonyms[0] : null}
-                </a>
+                {meaning.synonyms ? (
+                  <button
+                    onClick={() => setSearch(meaning.synonyms[0])}
+                    id={meaning.synonyms[0]}
+                    className="synonym"
+                  >
+                    {meaning.synonyms[0]}
+                  </button>
+                ) : null}
               </div>
             ) : null}
           </div>
