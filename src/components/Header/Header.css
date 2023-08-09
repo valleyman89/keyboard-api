@@ -25,3 +25,11 @@ hgroup {
   grid-area: 2 / 1 / 3 / 4;
   width: 100%;
 }
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  header {
+    grid-template-columns: 1fr repeat(2, 0.3fr);
+    justify-items: end;
+  }
+}
