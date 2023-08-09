@@ -16,6 +16,7 @@ const SearchField = () => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        required
         ref={searchRef}
         type="search"
         placeholder="Search for any word..."
