@@ -1,12 +1,10 @@
 input[type="search"] {
   background-color: var(--secondary);
-  background-image: url("./icon-search.svg");
-  background-position: 90% 50%;
-  background-repeat: no-repeat;
   border-radius: 15px;
   border: 1px solid var(--secondary);
   color: var(--text-color);
   cursor: pointer;
+  display: inline-block;
   font-family: inherit;
   font-size: 2rem;
   font-weight: bold;
@@ -14,23 +12,35 @@ input[type="search"] {
   opacity: 75%;
   padding: 1.5rem;
   text-transform: lowercase;
-  width: 100%;
-}
-input[type="search"]:focus {
-  opacity: 100%;
-  outline: none;
-  border: 1px solid var(--accent);
+  width: 75%;
 }
 
-input[type="search"]:invalid {
-  border: 1px solid var(--error);
+input[type="search"]:focus {
+  border: 1px solid var(--accent);
+  opacity: 100%;
+  outline: none;
+}
+
+button[type="submit"] {
+  all: unset;
+  background-color: var(--background);
+  background-image: url("./icon-search.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0;
+  height: 2.5rem;
+  width: 20%;
+  padding: 0.5rem;
+}
+
+button[type="submit"]:disabled {
+  filter: grayscale(1);
+  opacity: 50%;
 }
 
 .error {
-  display: none;
-}
-
-input:invalid:not([value=""]) + .error {
-  display: block;
   color: var(--error);
+  display: block;
+  text-align: left;
 }
