@@ -25,7 +25,15 @@ body {
   }
 }
 
-/* Desktop */
+/* Desktop S */
+@media screen and (min-width: 1024px) {
+  .Container {
+    margin: auto;
+    max-width: 75%;
+  }
+}
+
+/* Desktop L */
 @media screen and (min-width: 1440px) {
   .Container {
     margin: auto;
