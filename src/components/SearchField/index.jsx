@@ -1,31 +1,37 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./SearchField.css";
 import { useSettingsContext } from "../../context";
+import { useForm } from "react-hook-form";
 
 const SearchField = () => {
   const { setSearch } = useSettingsContext();
 
-  const searchRef = useRef(null);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const onSubmit = (data) => setSearch(data.search);
 
-    if (searchRef.current !== null)
-      setSearch(searchRef.current.value.toLowerCase());
-  };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <input
-        autoFocus
-        required
-        ref={searchRef}
+        {...register("search", { required: true, maxLength: 50 })}
         type="search"
         placeholder="Search for any word..."
         spellCheck={true}
         maxLength={"30"}
         pattern="^[a-zA-Z ]*$"
         title="Letters only"
+        className={errors.search?.type === "required" ? "test" : null}
       />
+
+      <button disabled={!isValid} type="submit"></button>
+
+      {errors.search?.type === "required" && (
+        <span className="error">Whoops, can't be empty... </span>
+      )}
     </form>
   );
 };
